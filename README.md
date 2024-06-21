@@ -4,7 +4,7 @@
 
 Este proyecto demuestra cómo extraer texto de una imagen utilizando OCR (Reconocimiento Óptico de Caracteres) con Python. El script utiliza la librería **Pillow** para manejar imágenes y **pytesseract** para realizar el OCR.
 
-![Descripción del Script OCR](path_to_your_image/your_image.png)
+![Descripción del Script OCR](https://github.com/deivid2025/Extracci-n-de-texto-de-im-genes-y-documentos-con-Python-y-Tesseract-OCR/blob/main/OSCR_SCRIPT/imagen/python%20script1.webp))
 
 ## Bibliotecas Utilizadas
 
