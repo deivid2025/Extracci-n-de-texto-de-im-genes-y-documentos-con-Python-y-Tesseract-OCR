@@ -1,0 +1,71 @@
+iimport requests
+
+2 from bs4 import BeautifulSoup
+
+3 import re
+
+4
+
+5 # Prompt user for URL
+
+6url = input("Please enter the URL: ")
+
+z
+
+8 # Prompt user for minimum and maximum word lengths
+
+9 min_length = int(input("Enter the minimum character length for words: "))
+10 max_length = int(input("Enter the maximum character length for words: "))
+11
+
+12 # Prompt user for the output file name
+
+13 output_file = input("Please enter the name of the output file (e.g., ‘output.txt'): ")
+14
+
+15 # Fetch the content from the URL
+
+16 response = requests.get(url)
+
+17 if response.status_code # 200:
+
+18 print("Error fetching the URL!")
+
+19 exit()
+
+20
+
+21 # Parse the content using BeautifulSoup
+
+22 soup = BeautifulSoup(response.content, ‘html.parser')
+
+23
+
+24 # Find all the text on the page
+
+25 text = soup.get_text()
+
+26
+
+27 # Use regex to extract words from the text
+
+28 words = re.findall(r'\b\w+\b', text)
+
+29
+
+30
+
+31 # Filter the words based on the provided lengths
+
+32 filtered_words = [word for word in words if min_length < len(word) < max_length]
+33
+
+34 # Write the words to the specified output file
+
+35 with open(output_file, ‘w') as file:
+
+36 for word in filtered_jwords:
+
+37 file.write(word + ‘\n')
+
+38
